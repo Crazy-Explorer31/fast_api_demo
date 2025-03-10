@@ -68,6 +68,6 @@ def predict_items_from_csv(file: UploadFile = File(...)):
 
     return FileResponse(file_result_name, media_type='text/csv', filename=file_result_name)
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="127.0.0.1", port=8000)
