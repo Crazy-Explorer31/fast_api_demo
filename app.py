@@ -56,7 +56,7 @@ async def root():
 @app.post("/predict_item_from_json")
 async def predict_item_from_json(item: Item):
     print(item)
-    return {'result' : ml_models["price_predictor"].predict(pd.DataFrame([item.model_dump()]))[0][0]}
+    return {'result' : ml_models["price_predictor"].predict(pd.DataFrame([item.model_dump()]))[0]}
 
 @app.post("/predict_items_from_csv")
 def predict_items_from_csv(file: UploadFile = File(...)):
